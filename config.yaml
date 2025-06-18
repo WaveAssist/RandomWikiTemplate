@@ -1,0 +1,13 @@
+name: RandomWiki
+description: ''
+nodes:
+- key: wikipedia_random_summary
+  name: WikipediaRandomSummary
+  file_name: wikipedia_random_summary.py
+  starting_node: true
+  schedule: null
+- key: daily_wikipedia_email
+  name: DailyWikipediaEmail
+  file_name: daily_wikipedia_email.py
+  run_after:
+  - wikipedia_random_summary
