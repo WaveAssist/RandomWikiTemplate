@@ -5,7 +5,9 @@ nodes:
   name: WikipediaRandomSummary
   file_name: wikipedia_random_summary.py
   starting_node: true
-  schedule: null
+  schedule:
+    cron: '30 09 * * *'  # Every day at 9:30 AM UTC
+    timezone: 'UTC'
 - key: daily_wikipedia_email
   name: DailyWikipediaEmail
   file_name: daily_wikipedia_email.py
